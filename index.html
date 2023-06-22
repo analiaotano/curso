@@ -416,8 +416,8 @@
   <img src="./assets/git.jpg" alt="">
 
 <div class="div-resaltado">
-  <div>
-    <p> ❗  </p>
+  <div class="item-red">
+     ❗ 
   </div>
   <div>
     <p><strong>Git fue creado por Linus Torvalds, quien también es el creador del sistema operativo Linux. 🖥️</strong></p>
@@ -431,6 +431,206 @@
 <h5>¿Esto tiene sentido? 🤯</h5>
 <p>Absolutamente no. En estos momentos nuestra cabeza piensa en archivos estáticos, pocas líneas de código y apenas sitios sin ningún estilo.</p>
 <p>Pero es importante comprender el correcto funcionamiento y el modo de trabajo que nos provee Git, para que en un futuro los procesos colaborativos y el versionado de nuestro código esté a la altura de la situación. ✅</p>
+
+
+<h3> ⬇ Instalación</h3>
+<p><strong>Luego de entrar en una crisis existencial por intentar entender que tiene que ver Git con un h1, vamos a proceder a instalarlo correctamente en nuestra computado</strong></p>
+
+<h4>Instalación en Windows 👨‍💻</h4>
+<li>Descargamos Git según nuestro sistema operativo 👉 <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> </li>
+
+<img src="./assets/descarga-git.jpg" alt="">
+
+<div class="div-resaltado">
+  <div  class="item-red">
+    ❗ 
+  </div>
+  <div>
+    <p>Al momento de iniciar el instalador, debemos asegurarnos de marcar la opción de instalar Git Bash en nuestra computadora (esto nos permitirá correr comandos de Linux en la consola sin problemas para trabajar con Git). 💻</p>
+  </div>
+</div>
+
+  <img src="./assets/descarga-git2.jpg" alt="">
+
+  <div class="div-resaltado">
+    <div  class="item-red">
+     ❗ 
+    </div>
+    <div>
+      <p>Es de suma importancia (en caso de utilizar la misma aplicación) elegir la opción que figura en la anterior imagen. Esta misma va a permitirnos utilizar al Visual Studio Code como nuestro editor por default. </p>
+    </div>
+  </div>
+
+  <p>Luego debemos avanzar con las opciones predeterminadas del instalador de Git hasta finalizar con el proceso. </p>
+
+  <h4>¿Cómo se maneja esto? </h4>
+  <p>Independientemente de tu sistema operativo, ya deberías tener Git instalado en tu computadora.
+    Ahora es tiempo de comenzar a usar Git Bash y sacarle el máximo potencial al sistema de versiones. 💪</p>
+    <p>Pero... ¿Cómo puedo moverme en una terminal, que es una terminal, se maneja sola, es un tema difícil de hackers? 🥴</p>
+    <p>NO. No es un Tesla que se maneja solo, ni las pantallas piratas de las películas de informática. 
+      Es accesible para que todos la usemos, y de vital importancia para nuestra carrera cómo programadores. 🙂</p>
+
+
+      <h3> 🔝 Primeros pasos en la terminal </h3>
+      <p><strong>Luego de un café y una increíble reflexión de que no importa lo difícil que sea, pero que tenemos que aprender Git para progresar en el desarrollo de software: vamos a meternos en la terminal.</strong></p>
+
+      <h4>Aprendiendo a manejar la terminal 👨‍💻</h4>
+      <p>Esta misma nos permite interactuar con nuestra computadora sin necesidad de utilizar una interfaz gráfica. Sin embargo, las computadoras usan diferentes sistemas de archivos y manejan distintos comandos, dependiendo del sistema operativo que utilicen.</p>
+
+      <h4>Diferencias entre la estructura de archivos de según SO</h4>
+      <li>La ruta principal en Windows es C:, en UNIX es solo /.</li>
+      <li>Windows no hace diferencia entre mayúsculas y minúsculas pero UNIX sí, a esto se lo conoce como case sensitive.</li>
+
+      <div class="div-resaltado">
+        <div class="item-red">
+          ❗ 
+        </div>
+        <div>
+          <p>GitBash usa la ruta <b> /c </b>para dirigirse a <b> C:\ </b>(o <b> /d ></b>para dirigirse <b> a D</b>:) en Windows. 
+            Por lo tanto, la ruta del usuario con el que estás trabajando es:  /c/Users/Nombre de tu usuario </p>
+        </div>
+      </div>
+
+      <h4>Abrimos Git Bash</h4>
+      <p>Iremos a nuestro buscador de aplicaciones para encontrar la terminal descargada recientemente (No importa en que sistema operativo te encontras)</p>
+      <img src="./assets/descarga-git3.jpg" alt="">
+
+
+      <h4>Comandos básicos en la terminal:</h4>
+      <p>No debemos aprender todos los comandos de memoria, solamente con la practica vamos a ir recordando cada uno luego de errar en su tipeo varias veces. </p>
+      <p>¡A preparar los ojos, son muchos! 👀</p>
+      <p> <b>pwd</b>: Nos muestra la ruta de carpetas en la que te encuentras ahora mismo.</p>
+      <img src="./assets/pwd.jpg" alt="">
+
+      <p> <b>mkdir</b>: Nos permite crear carpetas (por ejemplo, mkdir Carpeta-Importante).</p>
+      <img src="./assets/mkdir.jpg" alt="">
+
+      <p><b>touch</b>: Nos permite crear archivos (por ejemplo, touch index.html).</p>
+
+      <p><b>rm</b>: Nos permite borrar un archivo o carpeta (por ejemplo, rm index.html).</p>
+
+      <p><b>cat</b>: Ver el contenido de un archivo (por ejemplo, cat index.html).</p>
+
+      <p><b>ls</b>: Nos permite cambiar ver los archivos de la carpeta donde estamos ahora mismo.</p>
+
+      <p><b>ls -a</b>: Mostrar todos los archivos, incluso los ocultos.</p>
+
+      <p><b>ls -l</b>: Ver todos los archivos como una lista.</p>
+
+      <p><b>cd</b>: Nos permite navegar entre carpetas. </p>
+      <img src="./assets/cd.jpg" alt="">
+
+      <p><b>cd /</b>: Ir a la ruta principal</p>
+      <p><b>cd o cd ~</b>: Ir a la ruta de tu usuario </p>
+      <p><b>cd .. (cd + dos puntos)</b>: Regresar una carpeta hacia atrás.</p>
+      <p><b>clear</b>: Para limpiar la terminal. Podemos usar los atajos de teclado <b> Ctrl + L</b> o <b> Command + L </b>en Mac.</p>
+      <p>Una vez procesada la cantidad exhaustiva de comandos de la terminal de <b> Git Bash </b>, debemos introducirnos en los conceptos básicos de nuestro sistema de versiones para sacarle el máximo provecho. </p>
+
+      <h3> 👑 Creando nuestro primer repositorio Git</h3>
+      <p><strong>primeros pasos prácticos para comenzar a trabajar con este sistema de gestión de versiones Git. Arrancaremos creando nuestro primer repositorio local.</strong></p>
+
+      <h4>Antes de empezar…. ¿Qué es un repositorio? ‍🤷</h4>
+      <p>Un repositorio de Git es un <b>almacenamiento local (por ahora) y virtual de tu proyecto</b>. Te permite guardar versiones del código a las que puedes acceder cuando lo necesites.</p>
+
+      <h4>Preparando el entorno de trabajo 👨‍🎓</h4>
+      <p>Iniciar un repositorio en Git no es una tarea compleja. Lo primero que debemos hacer es crear aquella carpeta donde va a vivir nuestro proyecto, usando los comandos que aprendimos la sección anterior.</p>
+      <img src="./assets/repo.jpg" alt="">
+
+      <div class="div-resaltado">
+        <div class="item-green">
+           ✔ 
+        </div>
+        <div>
+          <p>Antes de que hayan creado esta carpeta, deben verificar que lo hayan hecho en el <b> directorio correcto</b>, en donde ustedes quieran que se encuentre esta carpeta que van a generar. La dirección actual donde nos encontramos está indicada en la línea superior, pero también lo pueden hacer de la siguiente manera. </p>
+        </div>
+      </div>
+      <img src="./assets/repo2.jpg" alt="">
+
+      <p>Por último, debemos movernos hacia esa carpeta con el comando <b> cd</b>.</p>
+      <img src="./assets/repo3.jpg" alt="">
+
+      <p>Ahora sí, estamos listos para comenzar a lanzar los comandos git en nuestra terminal.</p>
+
+      <h4>Iniciando nuestro repositorio Git 👨‍💻</h4>
+      <p>Una vez que estamos en la carpeta central de nuestro proyecto, lo único que debemos hacer es escribir el comando git init. Parecerá que no ha ocurrido nada, pero habremos inicializado un repositorio local.</p>
+      <img src="./assets/repo4.jpg" alt="">
+
+      <p>Esto genera una <b> carpeta oculta .git</b> , en donde vivirá la base de datos con los cambios atómicos (atómico porque cada cambio se guarda de una manera independiente) de los archivos de nuestro proyecto.</p>
+      <img src="./assets/repo5.jpg" alt="">
+
+      <p>De esta manera, los cambios que ocurran en los archivos que se encuentran dentro de nuestra carpeta, serán “escuchados” por Git. Cada una de estas modificaciones que mandemos al repositorio será una nueva versión de nuestro archivo.</p>
+
+
+      <h3> 🌌 Ciclo básico de trabajo</h3>
+      <p><strong>En esta página nos enfocaremos en el ciclo básico de trabajo en Git. También, aprenderemos sobre los primeros comandos básicos, como el add, commit o status.</strong></p>
+
+      <h4>Creando nuestro primer archivo dentro de Git 🚀</h4>
+      <p>Para esta sección, crearemos el primer archivo que tendrá nuestro proyecto. Será un .txt con un contenido de relleno, e iremos realizando diferentes cambios para entender su comportamiento.</p>
+      <img src="./assets/repo6.jpg" alt="">
+
+      <h4>Comandos básicos 💻</h4>
+      <p>Uno de los comandos más usados en los proyectos con Git es el <b> git status</b>. Esto nos permitirá ver el estado de nuestro archivo.</p>
+      <img src="./assets/repo7.jpg" alt="">
+
+      <p>Si leemos con atención el mensaje, nos dice: <b> “Untracked files”</b>, y luego nos aparece nuestro archivo en rojo. Pero…. ¿Qué significa esto?</p>
+      <p>Los archivos “untracked” son aquellos que <b> Git todavía no está rastreando sus cambios</b>, no es “consciente” de las modificaciones que ocurrieron. Es decir, que existen en nuestro directorio de trabajo, pero todavía <b> no están en nuestro repositorio local</b>. Para esto, debemos añadirlos con el comando git add y el nombre del archivo.</p>
+      <img src="./assets/repo8.jpg" alt="">
+
+      <p>En caso de que tengamos varios archivos sin rastrear, podemos utilizar el shortcut <b> git add . </b> y automáticamente se añadirán todos.</p>
+      <img src="./assets/repo9.jpg" alt="">
+
+      <h4>Área de Staging 📬</h4>
+      <p>Ya hemos hecho un git add para todos aquellos archivos que Git todavía no registraba. Pero todavía no hemos terminado.</p>
+      <p>Estos archivos pasaron a un área que se conoce como staging. ¿Qué significa esto?</p>
+      <p>El staging es el área que se crea en memoria RAM temporalmente al que agregamos archivos que vamos cambiando a través git add. En otras palabras, es un área de preparación, lugar temporal antes de enviar los cambios al repositorio.</p>
+      <img src="./assets/repo10.jpg" alt="">
+
+      <p>Por eso, cuando hicimos un git add, Git ya nos marcaba nuestros archivos en verde, para decirnos que ya conoce sus cambios, pero nos avisaba que todavía nos faltaba confirmarlos a través del mensaje: <b> “Changes to be committed”</b>.</p>
+      <p>Para llegar a aquel repositorio real que creamos anteriormente con el git init, debemos usar el comando <b> git commit</b>, que nos permite confirmar un cambio, al cuál le podemos agregar una <i> breve descripción</i>.</p>
+      <p>La forma de agregar esta descripción es a través del <b> flag -m </b>y luego escribiendo el comentario entre comillas.</p>
+      <img src="./assets/repo11.jpg" alt="">
+
+      <p>Y listo!! Ya no tenemos archivos untracked ni nada por registrar a través de un commit.</p>
+      <img src="./assets/repo12.jpg" alt="">
+      
+      <p>Si todavía tienen dudas de que todo haya funcionado correctamente, pueden usar el comando <b> git log</b>, el cual le mostrará la <b> historia de todos los commits </b> con su respectivo mensaje de nuestro proyecto.</p>
+      <img src="./assets/repo13.jpg" alt="">
+
+
+      <h3> 🌳  Ramas  </h3>
+      <p><strong>En este módulo nos adentraremos en el concepto de rama dentro de Git. Además, veremos algunos términos relacionados con el tema.</strong></p>
+
+      <h4>¿Keseso de las ramas? 🧀</h4>
+      <p>Las ramas son la forma que nos provee Git para <b> dividir nuestro entorno de trabajo</b>, y poder realizar cada funcionalidad sin afectar ni depender del resto.</p>
+      <p>Podemos entenderla como una <b> línea independiente de desarrollo</b> que nos sirve para <b>abstraer los procesos de cambio, preparación y confirmación</b> .</p>
+      <p>Cada rama tiene su propio <b> historial de confirmación (commits</b>), lo que crea una bifurcación en el historial del proyecto.</p>
+      <img src="./assets/repo14.jpg" alt="">
+
+      <p>Probablemente veas esta imágen y te confundas un poco. Por ahora, lo más importante que tienes que saber es que cuando creamos una rama, básicamente <b> creamos una copia del último commit de la rama donde nos encontramos</b>. De esta forma, podemos comenzar a trabajar en una nueva feature con la versión más reciente de nuestro proyecto.</p>
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

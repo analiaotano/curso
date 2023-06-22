@@ -80,7 +80,36 @@ b {
     border-radius: 10px;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.item-green {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border: 10px;
+    border-left-style: solid;
+    border-left-color: green;
+    font-size: 40px;
+
+}
+
+.item-red {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border: 10px;
+    border-left-style: solid;
+    border-left-color: red;
+    font-size: 40px;
+
 }
 
 
