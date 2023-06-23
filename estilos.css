@@ -92,7 +92,6 @@ b {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-
     margin-bottom: 40px;
     border: 10px;
     border-left-style: solid;
@@ -110,7 +109,7 @@ b {
     border-left-color: blue;
 }
 
-.item-green {
+.item {
     display: flex;
     justify-content: center;
     text-align: center;
@@ -120,25 +119,6 @@ b {
 
 }
 
-.item-red {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-left: 10px;
-    font-size: 40px;
-
-}
-
-.item-blue {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    align-items: center;
-    margin-left: 10px;
-    font-size: 40px;
-
-}
 
 img {
     margin-top: 40px;
