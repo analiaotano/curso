@@ -86,15 +86,36 @@ b {
     margin-bottom: 40px;
 }
 
+.section-item {
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    margin-bottom: 40px;
+    border: 10px;
+    border-left-style: solid;
+}
+
+.green {
+    border-left-color: green;
+}
+
+.red {
+    border-left-color: red;
+}
+
+.blue {
+    border-left-color: blue;
+}
+
 .item-green {
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding: 40px;
-    border: 10px;
-    border-left-style: solid;
-    border-left-color: green;
+    margin-left: 10px;
     font-size: 40px;
 
 }
@@ -104,12 +125,24 @@ b {
     justify-content: center;
     text-align: center;
     align-items: center;
-    padding: 40px;
-    border: 10px;
-    border-left-style: solid;
-    border-left-color: red;
+    margin-left: 10px;
     font-size: 40px;
 
+}
+
+.item-blue {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-left: 10px;
+    font-size: 40px;
+
+}
+
+img {
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 

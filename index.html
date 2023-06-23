@@ -415,14 +415,14 @@
 
   <img src="./assets/git.jpg" alt="">
 
-<div class="div-resaltado">
+  <section class="section-item red">
   <div class="item-red">
      ❗ 
   </div>
   <div>
     <p><strong>Git fue creado por Linus Torvalds, quien también es el creador del sistema operativo Linux. 🖥️</strong></p>
   </div>
-</div>
+  </section>
 
 <h4>¿Para qué sirve Git? 🤔</h4>
 <p>Con Git vamos a poder controlar todos los cambios que se hacen en nuestra aplicación y en nuestro código para tener control absoluto de todo lo que pasa en el mismo.</p>
@@ -441,25 +441,25 @@
 
 <img src="./assets/descarga-git.jpg" alt="">
 
-<div class="div-resaltado">
+<section class="section-item red">
   <div  class="item-red">
     ❗ 
   </div>
   <div>
     <p>Al momento de iniciar el instalador, debemos asegurarnos de marcar la opción de instalar Git Bash en nuestra computadora (esto nos permitirá correr comandos de Linux en la consola sin problemas para trabajar con Git). 💻</p>
   </div>
-</div>
+</section>
 
   <img src="./assets/descarga-git2.jpg" alt="">
 
-  <div class="div-resaltado">
+  <section class="section-item red">
     <div  class="item-red">
      ❗ 
     </div>
     <div>
       <p>Es de suma importancia (en caso de utilizar la misma aplicación) elegir la opción que figura en la anterior imagen. Esta misma va a permitirnos utilizar al Visual Studio Code como nuestro editor por default. </p>
     </div>
-  </div>
+  </section>
 
   <p>Luego debemos avanzar con las opciones predeterminadas del instalador de Git hasta finalizar con el proceso. </p>
 
@@ -481,7 +481,7 @@
       <li>La ruta principal en Windows es C:, en UNIX es solo /.</li>
       <li>Windows no hace diferencia entre mayúsculas y minúsculas pero UNIX sí, a esto se lo conoce como case sensitive.</li>
 
-      <div class="div-resaltado">
+      <section class="section-item red">
         <div class="item-red">
           ❗ 
         </div>
@@ -489,7 +489,7 @@
           <p>GitBash usa la ruta <b> /c </b>para dirigirse a <b> C:\ </b>(o <b> /d ></b>para dirigirse <b> a D</b>:) en Windows. 
             Por lo tanto, la ruta del usuario con el que estás trabajando es:  /c/Users/Nombre de tu usuario </p>
         </div>
-      </div>
+      </section>
 
       <h4>Abrimos Git Bash</h4>
       <p>Iremos a nuestro buscador de aplicaciones para encontrar la terminal descargada recientemente (No importa en que sistema operativo te encontras)</p>
@@ -536,14 +536,15 @@
       <p>Iniciar un repositorio en Git no es una tarea compleja. Lo primero que debemos hacer es crear aquella carpeta donde va a vivir nuestro proyecto, usando los comandos que aprendimos la sección anterior.</p>
       <img src="./assets/repo.jpg" alt="">
 
-      <div class="div-resaltado">
+      <section class="section-item green">
         <div class="item-green">
            ✔ 
         </div>
         <div>
           <p>Antes de que hayan creado esta carpeta, deben verificar que lo hayan hecho en el <b> directorio correcto</b>, en donde ustedes quieran que se encuentre esta carpeta que van a generar. La dirección actual donde nos encontramos está indicada en la línea superior, pero también lo pueden hacer de la siguiente manera. </p>
         </div>
-      </div>
+      </section>
+
       <img src="./assets/repo2.jpg" alt="">
 
       <p>Por último, debemos movernos hacia esa carpeta con el comando <b> cd</b>.</p>
@@ -608,6 +609,443 @@
 
       <p>Probablemente veas esta imágen y te confundas un poco. Por ahora, lo más importante que tienes que saber es que cuando creamos una rama, básicamente <b> creamos una copia del último commit de la rama donde nos encontramos</b>. De esta forma, podemos comenzar a trabajar en una nueva feature con la versión más reciente de nuestro proyecto.</p>
 
+      <section class="section-item blue">
+        <div class="item-blue">
+           ℹ 
+        </div>
+        <div>
+          <p>Master es la rama por defecto que se crea automáticamente cuando inicializamos el repositorio con Git. Además, será nuestra rama principal, la que en un futuro podremos cargar la versión final de nuestra aplicación para poder subirla a producción. Pero para eso, todavía falta mucho… </p>
+        </div>
+      </section>
+
+      <img src="./assets/enano.jpg" alt="">
+      
+      <h4>Hablemos del HEAD 🤯</h4>
+      <p>El HEAD es un <b> apuntador móvil</b> que hará referencia al último commit de la rama donde nos encontramos actualmente.</p>
+      <p>Si seguimos con nuestro ejemplo, el HEAD de nuestra aplicación con Git apuntará hacia el único commit que hicimos en master, ya que no hemos trabajado con otras ramas todavía.</p>
+      <p>Podemos comprobar esto volviendo a ejecutar el comando <b> git log</b>.</p>
+      <img src="./assets/repo15.jpg" alt="">
+
+      <p>En la próxima sección, aprenderemos a crear y eliminar ramas, cómo movernos entre ellas para poder trabajar features de forma independiente, concluyendo en la fusión de todas estas características en una misma rama, master.</p>
+
+
+      <h3> 👷‍♂️ Trabajando con ramas</h3>
+      <p><strong>En este apartado aprenderemos a cómo crear y eliminar ramas, así como movernos entre ellas para posteriormente fusionarlas.</strong></p>
+
+      <h4>Comandos git branch y git checkout  😎</h4>
+      <p>Arranquemos por lo más básico, <b> ¿Cómo hacemos para ver todas las ramas de nuestro proyecto?</b> Para esto, existe el comando git branch. Miremos que sucede si ejecutamos este comando en nuestro proyecto.</p>
+      <img src="./assets/repo16.jpg" alt="">
+
+      <p>Tal como lo imaginabas, solo tenemos una rama, <b> la master</b>, la cual es generada por Git automáticamente cuando inicializamos nuestro repositorio local.</p>
+      <p>Para crear una nueva rama, debemos usar el mismo comando, pero indicando al final <b> el nombre de esta nueva bifurcación</b>, de la siguiente manera:</p>
+      <img src="./assets/repo17.jpg" alt="">
+
+      <p>Sin embargo, aunque ya hayamos creado nuestra nueva rama llamada dev, todavía no nos encontramos en ella. El * a la izquierda del nombre de la rama <b> nos indica en donde nos encontramos actualmente </b>(en este caso, en master).</p>
+      <p>Para cambiarnos de rama, debemos utilizar el comando <b> git checkout </b>y el nombre de la rama a la que nos vamos a cambiar.</p>
+      <img src="./assets/repo18.jpg" alt="">
+
+      <p>Existe un shortcut que nos permite crear una rama y cambiarnos a ella en un solo comando. Este es el <b> git checkout -b </b>más el nombre de la rama.</p>
+      <img src="./assets/repo19.jpg" alt="">
+
+      <p>Ya que creamos esta rama, aprovechemos para borrar la rama dev. Esto lo hacemos con el comando <b> git branch -d </b>más el nombre de la rama.</p>
+      <img src="./assets/repo20.jpg" alt="">
+
+      <section class="section-item red">
+        <div class="item-red">
+          ❗ 
+        </div>
+        <div>
+          <p>Es importante que para borrar una rama no nos encontremos en ella. De lo contrario, nos saltará el siguiente error en la consola.</p>
+        </div>
+      </section>
+
+      <img src="./assets/repo21.jpg" alt="">
+
+      <p>Ten en cuenta que Git arrojará un error si <b> los cambios en la rama que estás intentando eliminar no están completamente combinados con la rama actual</b>.</p>
+      <p>Se puede anular esto y forzar a Git a eliminar la rama con la opción -D ( letra mayúscula) o usando la opción <b> --force </b> con -d o <b> --delete</b>.</p>
+      <p>Por último, <b> cambiemos el nombre de nuestra rama development a dev</b>, para facilitar su lectura. Para esto, usemos el comando git branch -m más el nuevo nombre que le queremos dar a la rama en donde nos encontramos.</p>
+
+      <img src="./assets/repo22.jpg" alt="">
+
+      <h4>Fusionando ramas 💥</h4>
+      <p>Comencemos por hacer <b> algún cambio en los archivos </b> que tenemos actualmente. Recordemos que estamos trabajando en la rama dev.</p>
+      <img src="./assets/repo23.jpg" alt="">
+
+      <p>Ahora, <b>subamos estos cambios a Git</b>  desde la rama dev.</p>
+
+      <img src="./assets/repo24.jpg" alt="">
+
+      <p>Pero si nos movemos hacia la rama master…. <b> ¿Tenemos esta última versión de nuestro archivo?</b> Vamos a comprobarlo. Nos movemos a master con el comando git checkout y luego abrimos el mismo archivo.</p>
+      <img src="./assets/repo25.jpg" alt="">
+
+      <p>La respuesta es no. La forma de unir los cambios de una rama con otra es a través del comando git merge más el nombre de la rama que queremos fusionar desde la rama que recibirá esos cambios.</p>
+      <img src="./assets/repo26.jpg" alt="">
+
+      <p>Revisemos que nuestro archivo se haya actualizado.</p>
+      <img src="./assets/repo27.jpg" alt="">
+
+      <p><b>Perfecto!!</b> Ya tenemos la última versión de nuestra aplicación en la rama master.</p>
+
+      <section class="section-item blue">
+        <div class="item-blue">
+           ℹ 
+        </div>
+        <div>
+          <p>En muchas ocasiones, a la hora de hacer fusiones pueden <b>surgir conflictos</b> . En estos casos, debemos <b> ir uno por uno</b> y elegir entre la versión de la rama donde estamos o la versión de la rama que estamos fusionando, o directamente descartar ambos cambios. </p>
+        </div>
+      </section>
+
+      <p>Podemos resumir todo lo que vimos en la sección de ramas con esta imagen, en donde el tronco principal sería master, del cual sale uno más pequeño al que llamaremos dev, para por último fusionarlos y dejar todo en la rama principal.</p>
+      <img src="./assets/ramas-merge.jpg" alt="">
+
+
+      <h3> 🙌 Iniciando sesión en GitHub</h3>
+      <p><strong>En esta sección aprenderemos sobre el importante rol de GitHub en nuestro día a día desarrollando y colaborando activamente con nuestros pares.</strong></p>
+
+      <h4>¿Y de donde salió esto?  🤷‍♀️❓</h4>
+      <p>GitHub es una plataforma de desarrollo <b> colaborativo</b> que permite a los usuarios crear y compartir código. También hace que el <b>seguimiento</b> y la <b>administración</b>  de los cambios en el código sean más fáciles. 🙂</p>
+
+      <section class="section-item green">
+        <div class="item-green">
+           ✔ 
+        </div>
+        <div>
+          <p>Utiliza el sistema de control de versiones Git. Actualmente es propiedad de Microsoft y cuenta con más de 27 millones de usuarios. </p>
+        </div>
+      </section>
+
+      <p>Github puede considerarse como la <b> red social</b> de código para los programadores, y en muchos casos es visto como tu <b> curriculum vitae</b> o <b>portfoli</b>o de trabajos. </p>
+      <img src="./assets/gatito-github.jpg" alt="">
+
+      <p>También funciona como una <b>interfaz gráfica </b>  para nuestros repositorios, así se ve mucho más claro que en nuestra consola</p>
+
+      <h4>Iniciando sesión en GitHub 💻 </h4>
+      <li>Te creas una cuenta en <a href="http://github.com/" target="_blank">http://github.com/</a> (no es tan difícil).</li>
+
+      <img src="./assets/cuenta-git.jpg" alt="">
+
+      <p>Ahora bien, para que <b> Git </b>funcione correctamente y pueda subir nuestros archivos de la PC al repositorio de <b> Github</b>, debemos hacerle saber quiénes somos para que pueda vincularnos.
+        <br>
+        Tenes que abrir tu consola de comandos.📭 </p>
+        <img src="./assets/user-git.jpg" alt="">
+
+        <p>Para verificar que todo funcione correctamente, ingresá estos comandos y <b> comprobá </b>que el resultado coincida con su <b> nombre y dirección de correo electrónico</b>. ✅</p>
+        <img src="./assets/user-git2.jpg" alt="">
+
+
+        <h3>🔑  Llave SSH</h3>
+        <p><strong>En este apartado de la sección veremos cómo crear de manera local una llave SSH sin importar nuestro sistema operativo.</strong></p>
+
+        <h4>Llaves públicas y privadas🤷</h4>
+        <p>Las llaves públicas y privadas nos ayudan a cifrar y descifrar nuestros archivos de forma que los podamos compartir sin correr el riesgo de que sean interceptados por personas con malas <br>
+          Las llaves ssh en <b> GitHub</b> son una parte esencial de la seguridad cuando se trabaja con repositorios <b> públicos</b>. A continuación se explica cómo utilizar las llaves ssh en GitHub y qué consecuencias puede tener el <b> no hacerlo</b>. 😧<br>
+          Aunque pueda parecer un proceso tedioso y complicado, en realidad es bastante <b> sencillo </b> y <b> rápido</b> de configurar. Las llaves ssh nos permiten conectarnos a nuestros repositorios de forma segura, sin necesidad de proporcionar nuestra contraseña cada vez que queramos acceder. 🔐 
+         </p>
+
+         <h4>Generando nuestra clave ssh (Windows y Linux) ☝️</h4>
+         <li>Deberemos abrir la terminal, y sin ingresar a ninguna carpeta <b>ejecutaremos</b>:
+          <img src="./assets/clave-ssh.jpg" alt="">
+         </li>
+         <li>Luego <b>prendemos</b> el “servidor” de llaves SSH de nuestra computadora con:
+        <img src="./assets/clave-ssh2.jpg" alt=""></li>
+         <li>El siguiente paso es <b> añadir </b>nuestra llave ssh a este reciente servidor. Para eso utilizaremos: 
+          <img src="./assets/clave-ssh3.jpg" alt="">
+        </li>
+
+        <h3> ➕  Añadiendo la SSH a GitHub</h3>
+        <p><strong>En este breve módulo nos centraremos en cómo añadir nuestra llave ssh en GitHub para comunicarnos de forma segura con nuestros repositorios.</strong></p>
+
+        <h4>SSH en GitHub 🤨</h4>
+        <p>Una vez creadas nuestras llaves SSH podemos y debemos cargar la llave pública en GitHub para comunicarnos de forma <b>segura </b> y sin necesidad de escribir nuestro usuario y contraseña cada vez que manipulemos el repositorio. <br>
+          Ahora tenemos que decirle a <b> GitHub </b>cuál es nuestra clave SSH para que podamos insertar el código sin tener que escribir una contraseña cada vez que quieras subir un cambio. 🔑 <br>
+
+Primero, iremos hasta donde GitHub recibe nuestra clave SSH. 
+<ol>
+  <li> <b>Iniciamos sesión</b> en GitHub y hacemos click en la imagen de perfil de la esquina superior derecha.</li>
+  <li>Luego, hacemos click en <b> Settings</b> en el menú desplegable.</li>
+  <img src="./assets/clave-ssh4.jpg" alt="">
+</ol>
+        </p>
+        <img src="./assets/clave-ssh5.jpg" alt="">
+
+        <p>Una vez realizados los pasos anteriores, presionaremos sobre el botón verde en la esquina superior derecha que dice <b> New SSH Key</b>.  <br>
+
+          Nombra tu clave con algo que sea lo suficientemente <b> descriptivo</b> para que recuerdes de dónde vino. Ej: Notebook Lenovo Oficina🤨</p>
+
+          <section class="section-item blue">
+            <div class="item-blue">
+               ℹ 
+            </div>
+            <div>
+              <p>Deje esta ventana abierta mientras realiza los siguientes pasos. 🪟 </p>
+            </div>
+          </section>
+
+          <p>Ahora necesita copiar su clave SSH <b> pública</b>. Para hacer esto, usaremos un comando específico según nuestro sistema operativo. (Tenga en cuenta que la <b> .pub extensión</b> del archivo es importante en este caso porque debemos compartir nuestra clave <b> pública</b>). ©️</p>
+
+          <h4>Comandos para copiar la llave SSH 🖥️:  </h4>
+
+          <h5>Windows: 😀</h5>
+          <img src="./assets/clave-ssh6.jpg" alt="">
+
+          <h5>Linux: 😈</h5>
+          <img src="./assets/clave-ssh7.jpg" alt="">
+
+          <h5>Mac: 😊</h5>
+          <img src="./assets/clave-ssh8.jpg" alt="">
+
+          <h4>Agregar la clave ➕</h4>
+          <p>Resaltá y copia el <b> resultado</b>, que comienza con ssh-rsa y termina con su dirección de correo electrónico. <br> 
+          Ahora, volvé a <b> GitHub</b> en la ventana del navegador y pega la clave que copiaste en el campo requerido. <br>
+          Luego, hace click en <b> Add </b> SSH key y finalizamos con nuestro proceso de agregado de la llave.</p>
+
+          <section class="section-item red">
+            <div class="item-red">
+              ❗ 
+            </div>
+            <div>
+              <p>Documentación oficial: <a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account" target="_blank">https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account</a> </p>
+            </div>
+          </section>
+
+
+          <h3> 🎯  Repositorio Remoto</h3>
+          <p><strong>En este ultimo apartado de la sección veremos todos los pasos necesarios para crear nuestro repositorio remoto en Github, realizar los primeros cambios y ponerlos nuevamente en línea.</strong></p>
+
+          <h4>Crear el Repositorio🤨</h4>
+          <p>Cree un nuevo repositorio haciendo click en el botón que se muestra en la captura de pantalla a continuación. </p>
+          <img src="./assets/crear-repo.jpg" alt="">
+
+          <li>Ponele un nombre al repositorio ej: “Git-Pruebas” en el campo de entrada del nombre del repositorio y cree el repositorio haciendo clic en el botón verde “Crear repositorio” .</li>
+          <li>Esto lo redireccionará a su nuevo repositorio en GitHub. Para copiar este repositorio en su máquina local (CPU/PC), seleccionamos todas las líneas ubicadas en las instrucciones y las pegamos en nuestra terminal.</li>
+
+          <img src="./assets/crear-repo2.jpg" alt="">
+
+          <p>¡Eso es! Conectaste correctamente el repositorio que se creó en GitHub a tu máquina local. 🥳</p>
+
+          <h4>Verificando el repositorio 🤔</h4>
+          <p>Luego debemos ingresar git remote -v en nuestra línea de comando. <br>
+          Esto mostrará la URL del repositorio que creó en GitHub, que es el control remoto para su copia local. Es posible que también haya notado la palabra origin al comienzo de la línea, que es el nombre de su conexión remota. </p>
+
+          <section class="section-item green">
+            <div class="item-green">
+               ✔ 
+            </div>
+            <div>
+              <p>El nombre <b> "origin"</b> es tanto el predeterminado como la convención para el repositorio remoto, pero podría haberse llamado fácilmente "picante" o "necesitoAyuda".</p>
+            </div>
+          </section>
+
+          <img src="./assets/crear-repo3.jpg" alt="">
+
+          <h4>Trabajo sobre el repositorio 🧤</h4>
+          <h5>Agregar otro archivo y subirlo a GitHub</h5>
+          <p>Crearemos un nuevo archivo en la carpeta y lo llamaremos holamundo.html. <br>
+          En la terminal, escribimos git status y veremos un aviso por nuestro holamundo.html</p>
+          <img src="./assets/crear-repo3a.jpg" alt="">
+
+          <p>Ahora agregamos el holamundo.html con <b>git add . </b> </p>
+          <img src="./assets/crear-repo3b.jpg" alt="">
+
+          <p>Luego, escribimos git status una vez más por buenas prácticas, y todo debería estar en el área de preparación.</p>
+          <img src="./assets/crear-repo4.jpg" alt="">
+
+          <p>En este momento ya estamos en condiciones de realizar un commit.</p>
+          <img src="./assets/crear-repo5.jpg" alt="">
+
+          <p>Y ahora con git log hacemos un chequeo del historial.</p>
+          <img src="./assets/crear-repo6.jpg" alt="">
+
+          <p><b>Listo terminamos.</b></p>
+
+          <p>¿A donde nos vamos? Falta lo más importante: Subir nuestro trabajo a <b> GitHub</b>. <br>
+          Escribamos <b> git push origin main</b>, o en su versión acortada <b> git push</b>. <br>
+          <b>Git</b> indica que estamos llamando a nuestro sistema de versiones Git. <br>
+          <b>Push</b> porque queremos subir los cambios. <br>
+          <b>Origin</b> para hacer referencia a nuestro repositorio remoto y no a otro. <br>
+          <b>Main </b>para indicar la rama en la cual queremos dejar los cambios (antes Master)</p>
+
+          <img src="./assets/git-push.jpg" alt="">
+
+          <section class="section-item green">
+            <div class="item-green">
+               ✔ 
+            </div>
+            <div>
+              <p>Y ahora escribimos <b>git status</b>  una última vez para chequear si hay algo pendiente.</p>
+            </div>
+          </section>
+
+          <p>Y ahora si volvemos al repo de Github...</p>
+
+          <img src="./assets/git-push2.jpg" alt="">
+
+
+          <h3> 🚀 Ramas desde GitHub </h3>
+          <p><strong>¿Pensaste que ya habíamos terminado con las ramas? Casi, pero no. En este breve apartado, aprenderemos a cómo manejar las ramas desde GitHub.</strong></p>
+
+          <h4>Subir rama a GitHub 📩</h4>
+          <p>Cuando trabajemos con ramas en un repositorio conectado con GitHub, a la hora de hacer el push, nos pedirá que <b>subamos la rama</b> en donde estamos desarrollando. De lo contrario, <b> no podrá mandar los cambios al repositorio remoto</b>.</p>
+
+          <img src="./assets/subir-rama.jpg" alt="">
+
+          <p>Para subir una rama, solo debemos ejecutar el comando que allí nos indica, es decir, el <b> git push –set-upstream origin dev</b>, o en su defecto su versión acortada <b> git push -u origin dev</b>.</p>
+
+          <img src="./assets/subir-rama2.jpg" alt="">
+
+
+          <h4>Ver las ramas desde GitHub 👀</h4>
+          <p>Ahora, ya habiendo subido la rama dev, podemos ir a nuestro repositorio en <b> GitHub</b> y comprobar que todo haya ocurrido de forma exitosa. Para eso, tocamos el <b> botón que dice main</b>(en la pestaña <b> code</b> del repositorio).</p>
+
+          <img src="./assets/subir-rama3.jpg" alt="">
+
+
+          <section class="section-item green">
+            <div class="item-green">
+               ✔ 
+            </div>
+            <div>
+              <p>Efectivamente, ahí está nuestra rama dev ya desde GitHub.</p>
+            </div>
+          </section>
+
+          <p>Verifiquemos que esté respetando el contenido y los cambios que se realizaron localmente.</p>
+
+          <h5>Desde main:</h5>
+          <img src="./assets/subir-rama4.jpg" alt="">
+
+          <h5>Y ahora desde dev:</h5>
+          <img src="./assets/subir-rama5.jpg" alt="">
+
+          <h4>Pero… ¿Por qué main y no master? 🙌👏</h4>
+          <p>Si optamos por crear un repositorio <b> desde la línea de comandos</b>, por defecto GitHub subirá nuestra rama “master”, con un pequeño detalle. <b>Cambiará el nombre de master a main</b>  y la subirá través de estos dos comandos.</p>
+          <img src="./assets/subir-rama6.jpg" alt="">
+
+          <section class="section-item red">
+            <div class="item-red">
+              ❗ 
+            </div>
+            <div>
+              <p> Desde el 1 de octubre de 2020 GitHub cambió el nombre de la rama principal: ya no es <b> “master”</b>, sino <b>main</b>. <p> Esta acción tiene relación con el movimiento <b>#BlackLivesMatter</b>. </p>
+              <p>Más información 👉 <a href="https://microsofters.com/169742/hasta-github-cambiara-con-motivo-del-black-lives-matter/" target="_blank">https://microsofters.com/169742/hasta-github-cambiara-con-motivo-del-black-lives-matter/</a>  </p>
+            </div>
+          </section>
+
+         <H4>Borrar rama de GitHub 🗑️</H4>
+         <p>Si borramos alguna rama localmente, posiblemente también la queramos borrar en GitHub. <br>
+         Veamos qué ocurre si <b> borramos una rama localmente</b>.</p>
+
+         <img src="./assets/borrar-rama-local.jpg" alt="">
+
+         <p>Pero si <b> vamos a GitHub…</b></p>
+
+         <img src="./assets/borrar-rama-git.jpg" alt="">
+
+         <img src="./assets/borrar-rama-git2.jpg" alt="">
+
+         <p>Así es, <b> dev todavía no se ha ido de nuestro repositorio remoto en GitHub</b>. Pero no le queda mucho tiempo de vida. <br>
+        Para borrar esta rama, lo único que debemos hacer es ejecutar el siguiente comando <b> git push {remote} -d {branch}</b>, en este caso, <b> git push origin -d dev</b>.</p>
+
+        <img src="./assets/borrar-rama-git3.jpg" alt="">
+
+        <section class="section-item green">
+          <div class="item-green">
+             ✔ 
+          </div>
+          <div>
+            <p>Como siempre, verifiquemos que esto haya ocurrido de forma exitosa.</p>
+          </div>
+        </section>
+
+        <img src="./assets/borrar-rama-git4.jpg" alt="">
+
+        <img src="./assets/borrar-rama-git5.webp" alt="">
+
+
+        <h3> 🎫  Tags y versiones</h3>
+        <p><strong>En este apartado, luego de entender el trabajo con las ramas, veremos como manipular nuestras tags y versiones del proyecto en GitHub.</strong></p>
+
+        <h4>¿Qué son los tags? 🎟️</h4>
+        <p>Los <b> tags</b> o <b>etiquetas</b>  nos permiten asignar versiones a los commits más importantes de nuestro proyecto, de este modo, tendríamos una <b> referencia</b> del mismo y no se perdería en el historial entero de nuestros commits.</p>
+
+
+        <section class="section-item red">
+          <div class="item-red">
+            ❗ 
+          </div>
+          <div>
+            <p> Los tags no son cambios que afectan al <b>staging</b> o al repositorio local, sin embargo debemos <b> enviarlos</b> de igual manera al repositorio remoto de <b>GitHub</b> . 😃 </p>
+          </div>
+        </section>
+
+        <h4>Creando nuestro primer Tag 🆕</h4>
+        <p>Primero hacemos un git log para poder observar los commits <b> registrados</b> con sus respectivos <b> hashes</b>.  🤟</p>
+
+        <img src="./assets/tag.jpg" alt="">
+
+        <p>Luego creamos un tag y lo <b> asignamos</b> al commit elegido.</p>
+
+        <img src="./assets/tag2.jpg" alt="">
+
+        <p> <b>Revisamos</b> si el tag fue creado y ya pertenece a la <b> lista de tags</b>.</p>
+
+        <img src="./assets/tag3.jpg" alt="">
+
+
+        <h4>Ahora pensemos... o intentemos 🤨</h4>
+        <p>Nuestros tags se encuentran en el repositorio local, ya es tiempo de <b>subirlo</b>  al remoto y explotar toda su funcionalidad: <b> documentar </b>las versiones o cambios significativos de nuestro proyecto. 📈</p>
+
+        <img src="./assets/tag4.jpg" alt="">
+
+        <section class="section-item green">
+          <div class="item-green">
+             ✔ 
+          </div>
+          <div>
+            <p>Luego corroboramos en GitHub que ya fue creado.</p>
+          </div>
+        </section>
+
+        <h4>Borrando un tags ❌</h4>
+        <p>Puede ocurrir que hayamos cargado un <b> commit</b> a un hash incorrecto, o que su mensaje no sea el adecuado. Cómo siempre en git, nada se <b>pierde</b> , siempre podemos <b> volver y arreglar</b> el problema antes que nos despidan o se enojen con nosotros. <br>
+        Para eliminar nuestro tag de manera remota vamos a utilizar:</p>
+
+        <img src="./assets/tag5.jpg" alt="">
+
+        <p>Sin embargo, en <b> GitHub</b> siguen estando los cambios</p>
+
+        <img src="./assets/tag6.jpg" alt="">
+
+        <p>Así que debemos eliminar nuestro tag y su <b> referencia </b>en el repositorio remoto, de esta forma GitHub los elimina de su lista de Tags.</p>
+
+        <img src="./assets/tag7.jpg" alt="">
+        <img src="./assets/tag8.jpg" alt="">
+
+        <section class="section-item green">
+          <div class="item-green">
+             ✔ 
+          </div>
+          <div>
+            <p>Los <b> TAGS </b>también sirven para hacer un seguimiento del progreso de nuestra aplicación, identificando los cambios más importantes entre cada versión. <br> 
+            También nos permite hacer un <b>checkout</b> a uno de estos tags y volver el proyecto a esa <b> referencia </b>de ser necesario. </p>
+            </section>
+        </div>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -623,14 +1061,7 @@
 
 
 
-
-
-
-
-
-
-
-
+ 
 
 
 
